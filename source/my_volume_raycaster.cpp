@@ -64,11 +64,11 @@ const float PI = 3.14159265358979323846f;
 #define STR_NEWLINE "\n"
 #endif
 
-const std::string g_file_vertex_shader("../../../source/shader/volume.vert");
-const std::string g_file_fragment_shader("../../../source/shader/volume.frag");
+const std::string g_file_vertex_shader("../../../../source/shader/volume.vert");
+const std::string g_file_fragment_shader("../../../../source/shader/volume.frag");
 
-const std::string g_GUI_file_vertex_shader("../../../source/shader/pass_through_GUI.vert");
-const std::string g_GUI_file_fragment_shader("../../../source/shader/pass_through_GUI.frag");
+const std::string g_GUI_file_vertex_shader("../../../../source/shader/pass_through_GUI.vert");
+const std::string g_GUI_file_fragment_shader("../../../../source/shader/pass_through_GUI.frag");
 
 GLuint loadShaders(std::string const &vs, std::string const &fs)
 {
@@ -121,7 +121,7 @@ Turntable g_turntable;
 
 ///SETUP VOLUME RAYCASTER HERE
 // set the volume file
-std::string g_file_string = "../../../data/head_w256_h256_d225_c1_b8.raw";
+std::string g_file_string = "../../../../data/head_w256_h256_d225_c1_b8.raw";
 
 // set the sampling distance for the ray traversal
 float g_sampling_distance = 0.001f;

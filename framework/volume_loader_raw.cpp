@@ -8,14 +8,12 @@ Volume_loader_raw::load_volume(std::string filepath)
 {
   std::ifstream volume_file;
   volume_file.open(filepath, std::ios::in | std::ios::binary);
-
   volume_data_type data;
 
   if (volume_file.is_open()) {
     glm::ivec3 vol_dim = get_dimensions(filepath);
     unsigned channels = get_channel_count(filepath);
     unsigned byte_per_channel = get_bit_per_channel(filepath) / 8;
-
 
     size_t data_size = vol_dim.x
                       * vol_dim.y
@@ -30,7 +28,7 @@ Volume_loader_raw::load_volume(std::string filepath)
     volume_file.read((char*)&data.front(), data_size);
     volume_file.close();
 
-    //std::cout << "File " << filepath << " successfully loaded" << std::endl;
+//    std::cout << "File " << filepath << " successfully loaded" << std::endl;
 
     return data;
   } else {

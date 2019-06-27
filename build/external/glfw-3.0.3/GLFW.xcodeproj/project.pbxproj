@@ -1,0 +1,1004 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1110EA66B6C546779588355E /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 294920298284412FAFAB6464 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				913394E1403D4D91AF87B877 /* CMake Rules */,
+			);
+			dependencies = (
+				654A8A5071AC40E1B0C159C7 /* PBXTargetDependency */,
+				0DC9400CB8794899BAC648A5 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		DE7545D7669549B687FF9DF7 /* package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 09A67B434D8F417AA144793F /* Build configuration list for PBXAggregateTarget "package" */;
+			buildPhases = (
+				B50DCB7CDD7E4AD89C8BEF2E /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				BD7D6E5E7614423880A3A98F /* PBXTargetDependency */,
+			);
+			name = package;
+			productName = package;
+		};
+		F8EAE8D48EB84A35B4F9A996 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5F6505E7B58C45249AAACFB1 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				A2916DCBCBE84BA4AAEBF7C8 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				EB215C2065E3448A983D1C8A /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		FBB44724A6324761B72EE793 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C54AF3B8765347FDA8DFCD20 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				68F184A390B24861B00F8F45 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		19AB43A28E864832A37EA30B /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/context.c */ = {isa = PBXBuildFile; fileRef = D9C8B1C3F93B48B9ABAABAE3 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/context.c */; };
+		2667FDED153C4511863CCAAA /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_clipboard.m */ = {isa = PBXBuildFile; fileRef = A213C06272D54F4E9FD006B3 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_clipboard.m */; };
+		2B7C07F37BEF4611865D85CD /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = E1FD92077D164BAAA89465A2 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_time.c */; };
+		305E804ABA684E6C9F5AF562 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_gamma.c */ = {isa = PBXBuildFile; fileRef = C9EEA32FF18D4BE890181F70 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_gamma.c */; };
+		3621EF99AB3E4C69AAAE69A7 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/src/config.h */ = {isa = PBXBuildFile; fileRef = 81848A3176D142A986AF7B2E /* /Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/src/config.h */; };
+		37FE46945E004944A452E9A3 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = C031162558C14E5C95A1A72C /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_init.m */; };
+		5746BCA6AA2B4477BEFAFAF6 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = B5BEE5A8343E4167AA4FAC9A /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_window.m */; };
+		5CFE26C4344F41BC8C0FCE3D /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/input.c */ = {isa = PBXBuildFile; fileRef = 8195DF2211704AA6AD3C94BA /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/input.c */; };
+		71417813F7E04CC899BD429C /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = CC86F8BA191F47A0B7C652D1 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_platform.h */; };
+		7554D521975A4CB5BB28A53E /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/internal.h */ = {isa = PBXBuildFile; fileRef = F997A12F3BD3497EA31C03AE /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/internal.h */; };
+		78C3ABF824AB4C5A9BEA35B5 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/clipboard.c */ = {isa = PBXBuildFile; fileRef = 4F3CDF0098794FB994E9DF93 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/clipboard.c */; };
+		80491E6CF0A244FF9EDD283B /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/init.c */ = {isa = PBXBuildFile; fileRef = DD01A023BDCA4C45921BA041 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/init.c */; };
+		811EA9A8A3724A45A3C88B5C /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/gamma.c */ = {isa = PBXBuildFile; fileRef = F851C5FF7058407B8F35E3B7 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/gamma.c */; };
+		8C426439CDE64705BD0DE461 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/joystick.c */ = {isa = PBXBuildFile; fileRef = 98E60872D90C4C40B08D13D7 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/joystick.c */; };
+		A491B0FE74184161BF7EBDC9 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 53244616E47B4C888851A45D /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_monitor.m */; };
+		B0535959A3E74D27AE63B635 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/window.c */ = {isa = PBXBuildFile; fileRef = 593ADF6C78B044F5B06054C4 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/window.c */; };
+		BDB08725A49E4ED5AB63E023 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = 574211B0BD5E41E8BE5D8545 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/nsgl_context.m */; };
+		CE39AC3D751E46FFAFF9368E /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/nsgl_platform.h */ = {isa = PBXBuildFile; fileRef = 71F966AEC88E419BB4A8BA98 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/nsgl_platform.h */; };
+		D683750586084919A4595725 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = D79A99D6A5404C4EAAF3F1D0 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_joystick.m */; };
+		D6B992663D79429EB56F3757 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/time.c */ = {isa = PBXBuildFile; fileRef = 63E1360CA66547B28D7B05C9 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/time.c */; };
+		DDA20E3D88F44044BD970DEC /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 1287E981A12E4021A1D24DC6 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/include/GLFW/glfw3.h */; };
+		E172C66025304A519D458CEE /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = 0632E35329BE400CBEC6126A /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/include/GLFW/glfw3native.h */; };
+		F0425E5502B74E829195424F /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/monitor.c */ = {isa = PBXBuildFile; fileRef = 577112390D9A4A24B03C3AC6 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/monitor.c */; };
+		FD3D9C79F78144A69AAD692B /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 53B25EBADE4F4D96987E64B7 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/CMakeLists.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		011BDF5F277B476793BE7019 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		04ACBFBC40134C22800C99D6 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		675C5E5D546444BD9ED6D118 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		71D9289D9B3B4B818BE86F5A /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		1CED728BA95B4935BC66291D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C7D5203ED4C41D28C05C8F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A5459328188475AA91A7F29;
+			remoteInfo = glfw;
+		};
+		96932A9A679944ADA144E299 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C7D5203ED4C41D28C05C8F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1110EA66B6C546779588355E;
+			remoteInfo = ALL_BUILD;
+		};
+		C2DFC54A419B429890C3E1A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C7D5203ED4C41D28C05C8F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FBB44724A6324761B72EE793;
+			remoteInfo = ZERO_CHECK;
+		};
+		EA9D25E3008C4E37B9E84765 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C7D5203ED4C41D28C05C8F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1110EA66B6C546779588355E;
+			remoteInfo = ALL_BUILD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0632E35329BE400CBEC6126A /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
+		1287E981A12E4021A1D24DC6 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
+		2B8E7CCD4B6448B6922B4BE6 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F3CDF0098794FB994E9DF93 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/clipboard.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = clipboard.c; path = src/clipboard.c; sourceTree = SOURCE_ROOT; };
+		53244616E47B4C888851A45D /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
+		53B25EBADE4F4D96987E64B7 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		574211B0BD5E41E8BE5D8545 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
+		577112390D9A4A24B03C3AC6 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = src/monitor.c; sourceTree = SOURCE_ROOT; };
+		593ADF6C78B044F5B06054C4 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = src/window.c; sourceTree = SOURCE_ROOT; };
+		63E1360CA66547B28D7B05C9 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = time.c; path = src/time.c; sourceTree = SOURCE_ROOT; };
+		71F966AEC88E419BB4A8BA98 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/nsgl_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_platform.h; path = src/nsgl_platform.h; sourceTree = SOURCE_ROOT; };
+		81848A3176D142A986AF7B2E /* /Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/src/config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = config.h; path = "../../build/external/glfw-3.0.3/src/config.h"; sourceTree = SOURCE_ROOT; };
+		8195DF2211704AA6AD3C94BA /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = src/input.c; sourceTree = SOURCE_ROOT; };
+		98E60872D90C4C40B08D13D7 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/joystick.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = joystick.c; path = src/joystick.c; sourceTree = SOURCE_ROOT; };
+		A213C06272D54F4E9FD006B3 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_clipboard.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_clipboard.m; path = src/cocoa_clipboard.m; sourceTree = SOURCE_ROOT; };
+		B5BEE5A8343E4167AA4FAC9A /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
+		C031162558C14E5C95A1A72C /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
+		C9EEA32FF18D4BE890181F70 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_gamma.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_gamma.c; path = src/cocoa_gamma.c; sourceTree = SOURCE_ROOT; };
+		CC86F8BA191F47A0B7C652D1 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
+		D79A99D6A5404C4EAAF3F1D0 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = src/cocoa_joystick.m; sourceTree = SOURCE_ROOT; };
+		D9C8B1C3F93B48B9ABAABAE3 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = src/context.c; sourceTree = SOURCE_ROOT; };
+		DD01A023BDCA4C45921BA041 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = src/init.c; sourceTree = SOURCE_ROOT; };
+		E1FD92077D164BAAA89465A2 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = src/cocoa_time.c; sourceTree = SOURCE_ROOT; };
+		F851C5FF7058407B8F35E3B7 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/gamma.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gamma.c; path = src/gamma.c; sourceTree = SOURCE_ROOT; };
+		F8C830446AC44013BA1FCDA4 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F997A12F3BD3497EA31C03AE /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = src/internal.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		47A74DE953764D0DB23ED702 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F3CDF0098794FB994E9DF93 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/clipboard.c */,
+				A213C06272D54F4E9FD006B3 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_clipboard.m */,
+				C9EEA32FF18D4BE890181F70 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_gamma.c */,
+				C031162558C14E5C95A1A72C /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_init.m */,
+				D79A99D6A5404C4EAAF3F1D0 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_joystick.m */,
+				53244616E47B4C888851A45D /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_monitor.m */,
+				E1FD92077D164BAAA89465A2 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_time.c */,
+				B5BEE5A8343E4167AA4FAC9A /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_window.m */,
+				D9C8B1C3F93B48B9ABAABAE3 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/context.c */,
+				F851C5FF7058407B8F35E3B7 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/gamma.c */,
+				DD01A023BDCA4C45921BA041 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/init.c */,
+				8195DF2211704AA6AD3C94BA /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/input.c */,
+				98E60872D90C4C40B08D13D7 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/joystick.c */,
+				577112390D9A4A24B03C3AC6 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/monitor.c */,
+				574211B0BD5E41E8BE5D8545 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/nsgl_context.m */,
+				63E1360CA66547B28D7B05C9 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/time.c */,
+				593ADF6C78B044F5B06054C4 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		4EF4FACF486C418A8CE9769A = {
+			isa = PBXGroup;
+			children = (
+				F3BD54A8581D4FD1BB73BF08 /* ALL_BUILD */,
+				B8806BED91AE40BE8196AFCE /* glfw */,
+				5BA9EC453AF944B080F8A2D1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BA9EC453AF944B080F8A2D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B8E7CCD4B6448B6922B4BE6 /* glfw */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E3BE0485321448A95035052 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				81848A3176D142A986AF7B2E /* /Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/src/config.h */,
+				1287E981A12E4021A1D24DC6 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/include/GLFW/glfw3.h */,
+				0632E35329BE400CBEC6126A /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/include/GLFW/glfw3native.h */,
+				CC86F8BA191F47A0B7C652D1 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_platform.h */,
+				F997A12F3BD3497EA31C03AE /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/internal.h */,
+				71F966AEC88E419BB4A8BA98 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/nsgl_platform.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		719EB5389F9D40739577B84F /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		B8806BED91AE40BE8196AFCE /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				47A74DE953764D0DB23ED702 /* Source Files */,
+				6E3BE0485321448A95035052 /* Header Files */,
+				53B25EBADE4F4D96987E64B7 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		F3BD54A8581D4FD1BB73BF08 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				719EB5389F9D40739577B84F /* CMake Rules */,
+				F8C830446AC44013BA1FCDA4 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A5459328188475AA91A7F29 /* glfw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 849C9C55A36443ADBB757096 /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildPhases = (
+				CCB77AADC2A8492BA5E7B3FC /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glfw;
+			productName = glfw;
+			productReference = 2B8E7CCD4B6448B6922B4BE6 /* glfw */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C7D5203ED4C41D28C05C8F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1020;
+			};
+			buildConfigurationList = C6B58185D1D744039F65E129 /* Build configuration list for PBXProject "GLFW" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				71D9289D9B3B4B818BE86F5A /* Debug */,
+				675C5E5D546444BD9ED6D118 /* Release */,
+				011BDF5F277B476793BE7019 /* MinSizeRel */,
+				04ACBFBC40134C22800C99D6 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 4EF4FACF486C418A8CE9769A;
+			projectDirPath = "../../../external/glfw-3.0.3";
+			projectRoot = "";
+			targets = (
+				1110EA66B6C546779588355E /* ALL_BUILD */,
+				FBB44724A6324761B72EE793 /* ZERO_CHECK */,
+				8A5459328188475AA91A7F29 /* glfw */,
+				F8EAE8D48EB84A35B4F9A996 /* install */,
+				DE7545D7669549B687FF9DF7 /* package */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10F6FC8EF33B43C68DA6D57F = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		3E07E96996ED4511A4990D1F = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		5D2B2F74A60D42BBB10AEAAD = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		68F184A390B24861B00F8F45 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3 -f /Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		913394E1403D4D91AF87B877 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3 -f /Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		A2916DCBCBE84BA4AAEBF7C8 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3 -f /Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		B50DCB7CDD7E4AD89C8BEF2E /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3 -f /Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/CMakeScripts/package_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		F06288C24B3E432286AD4912 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCB77AADC2A8492BA5E7B3FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C3ABF824AB4C5A9BEA35B5 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/clipboard.c */,
+				2667FDED153C4511863CCAAA /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_clipboard.m */,
+				305E804ABA684E6C9F5AF562 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_gamma.c */,
+				37FE46945E004944A452E9A3 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_init.m */,
+				D683750586084919A4595725 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_joystick.m */,
+				A491B0FE74184161BF7EBDC9 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_monitor.m */,
+				2B7C07F37BEF4611865D85CD /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_time.c */,
+				5746BCA6AA2B4477BEFAFAF6 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/cocoa_window.m */,
+				19AB43A28E864832A37EA30B /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/context.c */,
+				811EA9A8A3724A45A3C88B5C /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/gamma.c */,
+				80491E6CF0A244FF9EDD283B /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/init.c */,
+				5CFE26C4344F41BC8C0FCE3D /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/input.c */,
+				8C426439CDE64705BD0DE461 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/joystick.c */,
+				F0425E5502B74E829195424F /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/monitor.c */,
+				BDB08725A49E4ED5AB63E023 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/nsgl_context.m */,
+				D6B992663D79429EB56F3757 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/time.c */,
+				B0535959A3E74D27AE63B635 /* /Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src/window.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0DC9400CB8794899BAC648A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FBB44724A6324761B72EE793 /* ZERO_CHECK */;
+			targetProxy = C2DFC54A419B429890C3E1A0 /* PBXContainerItemProxy */;
+		};
+		654A8A5071AC40E1B0C159C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A5459328188475AA91A7F29 /* glfw */;
+			targetProxy = 1CED728BA95B4935BC66291D /* PBXContainerItemProxy */;
+		};
+		BD7D6E5E7614423880A3A98F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1110EA66B6C546779588355E /* ALL_BUILD */;
+			targetProxy = EA9D25E3008C4E37B9E84765 /* PBXContainerItemProxy */;
+		};
+		EB215C2065E3448A983D1C8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1110EA66B6C546779588355E /* ALL_BUILD */;
+			targetProxy = 96932A9A679944ADA144E299 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1752A47802F745A78C6D9DDC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		24BEF7D016B64D8B825B986E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		2DEED1F1A6544C9CBA1893D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/build";
+			};
+			name = Release;
+		};
+		2F46CDD3CD774C13AD3892BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/build";
+			};
+			name = Debug;
+		};
+		3999E0CC94B84AD490BBACC0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		421636D5C3294CF6B77B3653 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'EXERCISE_SCIVIS_SOURCE_DIR=\"/Users/quandinh/Documents/GitHub/ExSciVis2019\"'","'EXERCISE_SCIVIS_BINARY_DIR=\"/Users/quandinh/Documents/GitHub/ExSciVis2019/build\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/quandinh/Documents/GitHub/ExSciVis2019/external,"/Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/include","/Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src","/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		49BBA95C88524FE295D0D528 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'EXERCISE_SCIVIS_SOURCE_DIR=\"/Users/quandinh/Documents/GitHub/ExSciVis2019\"'","'EXERCISE_SCIVIS_BINARY_DIR=\"/Users/quandinh/Documents/GitHub/ExSciVis2019/build\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/quandinh/Documents/GitHub/ExSciVis2019/external,"/Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/include","/Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src","/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		5954C760D2C94E39BD919AD7 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'EXERCISE_SCIVIS_SOURCE_DIR=\"/Users/quandinh/Documents/GitHub/ExSciVis2019\"'","'EXERCISE_SCIVIS_BINARY_DIR=\"/Users/quandinh/Documents/GitHub/ExSciVis2019/build\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/quandinh/Documents/GitHub/ExSciVis2019/external,"/Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/include","/Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src","/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		65209EE8F9F74706A03B0DFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'EXERCISE_SCIVIS_SOURCE_DIR=\"/Users/quandinh/Documents/GitHub/ExSciVis2019\"'","'EXERCISE_SCIVIS_BINARY_DIR=\"/Users/quandinh/Documents/GitHub/ExSciVis2019/build\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/quandinh/Documents/GitHub/ExSciVis2019/external,"/Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/include","/Users/quandinh/Documents/GitHub/ExSciVis2019/external/glfw-3.0.3/src","/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "     -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		673B65BDE69148EBA6359072 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		76BEE9FCF20049BCAEAF16B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		8B58F2C933C84AAD9F4E9C0F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/build";
+			};
+			name = RelWithDebInfo;
+		};
+		8BF0EE83FE324F20B935DF58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		96E8943A7A4F4F03B70A9EA2 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		97F63626C0E44545901C6EF5 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		9853F50AD9134E12B80FF9C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		A18F6A7063EF4374A430B4DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		B9D87A4389DB40FA913EF7FA /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		BDC1A0B6FAE64331AF3D67B8 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		C6D15D2634DC4F6890852FCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		CC289BB849194491AB0AF241 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		EFC05877BAF44B8690EC25B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		F17E77DFCC6A4611ABD4D8E1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		FB7747709BB347C69D2B3DF2 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/quandinh/Documents/GitHub/ExSciVis2019/build/external/glfw-3.0.3/build";
+			};
+			name = MinSizeRel;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09A67B434D8F417AA144793F /* Build configuration list for PBXAggregateTarget "package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6D15D2634DC4F6890852FCA /* Debug */,
+				9853F50AD9134E12B80FF9C8 /* Release */,
+				97F63626C0E44545901C6EF5 /* MinSizeRel */,
+				3999E0CC94B84AD490BBACC0 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		294920298284412FAFAB6464 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BF0EE83FE324F20B935DF58 /* Debug */,
+				673B65BDE69148EBA6359072 /* Release */,
+				24BEF7D016B64D8B825B986E /* MinSizeRel */,
+				1752A47802F745A78C6D9DDC /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5F6505E7B58C45249AAACFB1 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A18F6A7063EF4374A430B4DA /* Debug */,
+				76BEE9FCF20049BCAEAF16B1 /* Release */,
+				96E8943A7A4F4F03B70A9EA2 /* MinSizeRel */,
+				B9D87A4389DB40FA913EF7FA /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		849C9C55A36443ADBB757096 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65209EE8F9F74706A03B0DFD /* Debug */,
+				49BBA95C88524FE295D0D528 /* Release */,
+				421636D5C3294CF6B77B3653 /* MinSizeRel */,
+				5954C760D2C94E39BD919AD7 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C54AF3B8765347FDA8DFCD20 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC05877BAF44B8690EC25B3 /* Debug */,
+				CC289BB849194491AB0AF241 /* Release */,
+				BDC1A0B6FAE64331AF3D67B8 /* MinSizeRel */,
+				F17E77DFCC6A4611ABD4D8E1 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C6B58185D1D744039F65E129 /* Build configuration list for PBXProject "GLFW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F46CDD3CD774C13AD3892BB /* Debug */,
+				2DEED1F1A6544C9CBA1893D8 /* Release */,
+				FB7747709BB347C69D2B3DF2 /* MinSizeRel */,
+				8B58F2C933C84AAD9F4E9C0F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C7D5203ED4C41D28C05C8F0 /* Project object */;
+}
