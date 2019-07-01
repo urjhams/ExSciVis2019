@@ -123,34 +123,28 @@ void main()
         dst = color;
 #endif
 
-#if TASK == 12 
+#if TASK == 12 || TASK == 13
 
         // store starting & end point afor binary search
         vec3 start_point = sampling_pos;
-        vec3 end_point = sampling_pos;
         
         // the traversal loop,
         // termination when the sampling position is outside volume boundarys
         // another termination condition for early ray termination is added
         while (inside_volume)
         {
+            #if TASK == 12
             // get sample
             float s = get_sample_data(sampling_pos);
-                
-            //------------------------------------
-            // apply the transfer funcxtion to retrieve color & opacity
-            vec4 color = texture(transfer_texture, vec2(s, s));
-            if (color.r >= iso_value
-                && color.g >= iso_value
-                && color.b >= iso_value
-                && color.a >= iso_value)
-            {
+            
+            if (s >= iso_value) {
+                // apply the transfer functions to retrieve color and opacity
+                vec4 color = texture(transfer_texture, vec2(s, s));
                 dst = color;
                 // stop
                 break;
             }
-            end_point = sampling_pos;
-            //------------------------------------
+            #endif
 
             // increment the ray sampling position
             sampling_pos += ray_increment;
@@ -165,43 +159,27 @@ void main()
             // update the loop termination condition
             inside_volume = inside_volume_bounds(sampling_pos);
         }
-#endif
-
-#if TASK == 13
-        // store starting & end point afor binary search
-        vec3 start_point = sampling_pos;
-        vec3 end_point = sampling_pos;
-
-        bool found = false;
-        inside_volume = inside_volume_bounds(start_point);
-        
-        // the traversal loop,
-        // termination when the sampling position is outside volume boundarys
-        // another termination condition for early ray termination is added
-        while (inside_volume && !found)
-        {
-            // point between start & end
-            vec3 mid_point = normalize(end_point - start_point) / 2;
-            
-            // get sample
-            float s = get_sample_data(sampling_pos);
-            
-            // apply the transfer functions to retrieve color and opacity
-            vec4 color = texture(transfer_texture, vec2(s, s));
-            
-            if (color.r >= iso_value
-            && color.g >= iso_value
-            && color.b >= iso_value
-            && color.a >= iso_value)
+        #if TASK == 13
+            while (length(sampling_pos - start_point) > 1)
             {
-                dst = color;
-                found = true;
-            } else {
-                // divide the half to 2 & update inside volume
-                start_point = normalize(end_point - mid_point) / 2;
-                inside_volume = inside_volume_bounds(start_point);
+                vec3 mid_point = (sampling_pos + start_point) / 2;
+                
+                // get sample
+                float s = get_sample_data(mid_point);
+                
+                if (s >= iso_value) {
+                    // apply the transfer functions to retrieve color and opacity
+                    vec4 color = texture(transfer_texture, vec2(s, s));
+                    dst = color;
+                    // stop
+                    break;
+                }
+                else
+                {
+                    start_point = mid_point;
+                }
             }
-        }
+        #endif
 #endif
 
 
