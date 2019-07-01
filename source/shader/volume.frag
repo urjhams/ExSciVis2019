@@ -124,6 +124,11 @@ void main()
 #endif
 
 #if TASK == 12 || TASK == 13
+
+        // store starting & end point afor binary search
+        vec3 start_point = sampling_pos;
+        vec3 end_point = sampling_pos;
+        
         // the traversal loop,
         // termination when the sampling position is outside volume boundarys
         // another termination condition for early ray termination is added
@@ -131,15 +136,26 @@ void main()
         {
                 // get sample
                 float s = get_sample_data(sampling_pos);
+                
+                //------------------------------------
+                // apply the transfer funcxtion to retrieve color & opacity
+                vec4 color = texture(transfer_texture, vec2(s, s));
+        #if TASK == 12 // first hit tranversal
+                if (color.r >= iso_value
+                    && color.g >= iso_value
+                    && color.b >= iso_value
+                    && color.a >= iso_value)
+                    {
+                        dst = color;
+                        break;
+                    }
+        #endif
+                end_point = sampling_pos;
+                //------------------------------------
 
-                // dummy code
-                dst = vec4(light_diffuse_color, 1.0);
 
                 // increment the ray sampling position
                 sampling_pos += ray_increment;
-        #if TASK == 13 // Binary Search
-                IMPLEMENT;
-        #endif
         #if ENABLE_LIGHTNING == 1 // Add Shading
                 IMPLEMENTLIGHT;
                 #if ENABLE_SHADOWING == 1 // Add Shadows
