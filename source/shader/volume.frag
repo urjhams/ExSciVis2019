@@ -94,29 +94,29 @@ void main()
 
 #if TASK == 11
 
+        int count = 0;
+        float sum_sample = 0 ;
+        float avg_val;
+        
         // the traversal loop,
         // termination when the sampling position is outside volume boundarys
         // another termination condition for early ray termination is added
-        int count = 0;
-        float sum_s = 0 ;
-        float avg_val;
-        
         while (inside_volume)
         {
             count++;
             
             // get sample
-            float s = get_sample_data(sampling_pos);
-            sum_s += s;
+            float sample = get_sample_data(sampling_pos);
+            sum_sample += sample;
             
             // increment the ray sampling position
-            sampling_pos  += ray_increment;
+            sampling_pos += ray_increment;
             
             // update the loop termination condition
-            inside_volume  = inside_volume_bounds(sampling_pos);
+            inside_volume = inside_volume_bounds(sampling_pos);
         }
         // Compute avg of s and then assign dst = color
-        avg_val = sum_s/count;
+        avg_val = sum_sample / count;
         
         // apply the transfer functions to retrieve color and opacity
         vec4 color = texture(transfer_texture, vec2(avg_val, avg_val));
