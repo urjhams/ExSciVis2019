@@ -14,6 +14,5 @@ How To Install:
 GUI created with ImGui
 https://github.com/ocornut/imgui
 
-========
-Built on Mac OS 10.14.5
-Run on Xcode 10.2.1
+* Built on Mac OS 10.14.5
+* Run on Xcode 10.2.1
