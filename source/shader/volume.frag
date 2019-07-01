@@ -123,7 +123,7 @@ void main()
         dst = color;
 #endif
 
-#if TASK == 12 || TASK == 13
+#if TASK == 12
 
         // store starting & end point afor binary search
         vec3 start_point = sampling_pos;
@@ -134,37 +134,35 @@ void main()
         // another termination condition for early ray termination is added
         while (inside_volume)
         {
-                // get sample
-                float s = get_sample_data(sampling_pos);
+            // get sample
+            float s = get_sample_data(sampling_pos);
                 
-                //------------------------------------
-                // apply the transfer funcxtion to retrieve color & opacity
-                vec4 color = texture(transfer_texture, vec2(s, s));
-        #if TASK == 12 // first hit tranversal
-                if (color.r >= iso_value
-                    && color.g >= iso_value
-                    && color.b >= iso_value
-                    && color.a >= iso_value)
-                    {
-                        dst = color;
-                        break;
-                    }
-        #endif
-                end_point = sampling_pos;
-                //------------------------------------
+            //------------------------------------
+            // apply the transfer funcxtion to retrieve color & opacity
+            vec4 color = texture(transfer_texture, vec2(s, s));
+            if (color.r >= iso_value
+                && color.g >= iso_value
+                && color.b >= iso_value
+                && color.a >= iso_value)
+                {
+                    dst = color;
+                    break;
+                }
+            end_point = sampling_pos;
+            //------------------------------------
 
-
-                // increment the ray sampling position
-                sampling_pos += ray_increment;
+            // increment the ray sampling position
+            sampling_pos += ray_increment;
+                
         #if ENABLE_LIGHTNING == 1 // Add Shading
-                IMPLEMENTLIGHT;
-                #if ENABLE_SHADOWING == 1 // Add Shadows
-                        IMPLEMENTSHADOW;
-                #endif
+            IMPLEMENTLIGHT;
+            #if ENABLE_SHADOWING == 1 // Add Shadows
+                    IMPLEMENTSHADOW;
+            #endif
         #endif
 
-        // update the loop termination condition
-        inside_volume = inside_volume_bounds(sampling_pos);
+            // update the loop termination condition
+            inside_volume = inside_volume_bounds(sampling_pos);
         }
 #endif 
 
