@@ -123,7 +123,7 @@ void main()
         dst = color;
 #endif
 
-#if TASK == 12
+#if TASK == 12 
 
         // store starting & end point afor binary search
         vec3 start_point = sampling_pos;
@@ -144,27 +144,66 @@ void main()
                 && color.g >= iso_value
                 && color.b >= iso_value
                 && color.a >= iso_value)
-                {
-                    dst = color;
-                    break;
-                }
+            {
+                dst = color;
+                // stop
+                break;
+            }
             end_point = sampling_pos;
             //------------------------------------
 
             // increment the ray sampling position
             sampling_pos += ray_increment;
-                
-        #if ENABLE_LIGHTNING == 1 // Add Shading
-            IMPLEMENTLIGHT;
-            #if ENABLE_SHADOWING == 1 // Add Shadows
-                    IMPLEMENTSHADOW;
+            
+            #if ENABLE_LIGHTNING == 1 // Add Shading
+                IMPLEMENTLIGHT;
+                #if ENABLE_SHADOWING == 1 // Add Shadows
+                        IMPLEMENTSHADOW;
+                #endif
             #endif
-        #endif
-
+            
             // update the loop termination condition
             inside_volume = inside_volume_bounds(sampling_pos);
         }
-#endif 
+#endif
+
+#if TASK == 13
+        // store starting & end point afor binary search
+        vec3 start_point = sampling_pos;
+        vec3 end_point = sampling_pos;
+
+        bool found = false;
+        inside_volume = inside_volume_bounds(start_point);
+        
+        // the traversal loop,
+        // termination when the sampling position is outside volume boundarys
+        // another termination condition for early ray termination is added
+        while (inside_volume && !found)
+        {
+            // point between start & end
+            vec3 mid_point = normalize(end_point - start_point) / 2;
+            
+            // get sample
+            float s = get_sample_data(sampling_pos);
+            
+            // apply the transfer functions to retrieve color and opacity
+            vec4 color = texture(transfer_texture, vec2(s, s));
+            
+            if (color.r >= iso_value
+            && color.g >= iso_value
+            && color.b >= iso_value
+            && color.a >= iso_value)
+            {
+                dst = color;
+                found = true;
+            } else {
+                // divide the half to 2 & update inside volume
+                start_point = normalize(end_point - mid_point) / 2;
+                inside_volume = inside_volume_bounds(start_point);
+            }
+        }
+#endif
+
 
 #if TASK == 31
         // the traversal loop,
