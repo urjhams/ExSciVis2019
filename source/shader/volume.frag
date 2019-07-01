@@ -114,11 +114,11 @@ void main()
                 vec4 color = texture(transfer_texture, vec2(s, s));
 
                 // apply average intensity projection
-                // calculate total using current samÎple, previous average and  traversed_points 
-                avg_val.r = (color.r + avg_val.r * (traversed_points - 1)) / traversed_points;
-                avg_val.g = (color.g + avg_val.g * (traversed_points - 1)) / traversed_points;
-                avg_val.b = (color.b + avg_val.b * (traversed_points - 1)) / traversed_points;
-                avg_val.a = (color.a + avg_val.a * (traversed_points - 1)) / traversed_points;
+                // calculate total using current samÎple, previous average and traversed_points
+                avg_val.r = (color.r + avg_val.r * traversed_points) / traversed_points;
+                avg_val.g = (color.g + avg_val.g * traversed_points) / traversed_points;
+                avg_val.b = (color.b + avg_val.b * traversed_points) / traversed_points;
+                avg_val.a = (color.a + avg_val.a * traversed_points) / traversed_points;
 
                 // increment the ray sampling position
                 sampling_pos  += ray_increment;
