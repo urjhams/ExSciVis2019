@@ -34,7 +34,7 @@ uniform float   light_ref_coef;
 bool
 inside_volume_bounds(const in vec3 sampling_position)
 {
-        return (   all(greaterThanEqual(sampling_position, vec3(0.0)))
+        return (all(greaterThanEqual(sampling_position, vec3(0.0)))
                 && all(lessThanEqual(sampling_position, max_bounds)));
 }
 
@@ -44,15 +44,14 @@ get_sample_data(vec3 in_sampling_pos)
 {
         vec3 obj_to_tex = vec3(1.0) / max_bounds;
         return texture(volume_texture, in_sampling_pos * obj_to_tex).r;
-
 }
 
 void main()
 {
         /// One step trough the volume
-        vec3 ray_increment      = normalize(ray_entry_position - camera_location) * sampling_distance;
+        vec3 ray_increment  = normalize(ray_entry_position - camera_location) * sampling_distance;
         /// Position in Volume
-        vec3 sampling_pos       = ray_entry_position + ray_increment; // test, increment just to be sure we are in the volume
+        vec3 sampling_pos = ray_entry_position + ray_increment; // test, increment just to be sure we are in the volume
 
         /// Init color of fragment
         vec4 dst = vec4(0.0, 0.0, 0.0, 0.0);
@@ -94,40 +93,34 @@ void main()
 #endif 
 
 #if TASK == 11
-        vec4 avg_val = vec4(0.0, 0.0, 0.0, 0.0);
-
-        // store number of traversed points;
-        int traversed_points = 0;
 
         // the traversal loop,
         // termination when the sampling position is outside volume boundarys
         // another termination condition for early ray termination is added
+        int count = 0;
+        float sum_s = 0 ;
+        float avg_val;
+        
         while (inside_volume)
-        {      
-                // increment traversed_points by 1 each iteration
-                ++traversed_points;        
-
-                // get sample
-                float s = get_sample_data(sampling_pos);
-
-                // apply the transfer functions to retrieve color and opacity
-                vec4 color = texture(transfer_texture, vec2(s, s));
-
-                // apply average intensity projection
-                // calculate total using current samÎple, previous average and traversed_points
-                avg_val.r = (color.r + avg_val.r * traversed_points) / traversed_points;
-                avg_val.g = (color.g + avg_val.g * traversed_points) / traversed_points;
-                avg_val.b = (color.b + avg_val.b * traversed_points) / traversed_points;
-                avg_val.a = (color.a + avg_val.a * traversed_points) / traversed_points;
-
-                // increment the ray sampling position
-                sampling_pos  += ray_increment;
-
-                // update the loop termination condition
-                inside_volume  = inside_volume_bounds(sampling_pos);
+        {
+            count++;
+            
+            // get sample
+            float s = get_sample_data(sampling_pos);
+            sum_s += s;
+            
+            // increment the ray sampling position
+            sampling_pos  += ray_increment;
+            
+            // update the loop termination condition
+            inside_volume  = inside_volume_bounds(sampling_pos);
         }
-
-        dst = avg_val;
+        // Compute avg of s and then assign dst = color
+        avg_val = sum_s/count;
+        
+        // apply the transfer functions to retrieve color and opacity
+        vec4 color = texture(transfer_texture, vec2(avg_val, avg_val));
+        dst = color;
 #endif
 
 #if TASK == 12 || TASK == 13
