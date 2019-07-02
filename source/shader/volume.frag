@@ -30,20 +30,28 @@ uniform vec3    light_diffuse_color;
 uniform vec3    light_specular_color;
 uniform float   light_ref_coef;
 
-
-bool
-inside_volume_bounds(const in vec3 sampling_position)
+bool inside_volume_bounds(const in vec3 sampling_position)
 {
         return (all(greaterThanEqual(sampling_position, vec3(0.0)))
                 && all(lessThanEqual(sampling_position, max_bounds)));
 }
 
-
-float
-get_sample_data(vec3 in_sampling_pos)
+float get_sample_data(vec3 in_sampling_pos)
 {
         vec3 obj_to_tex = vec3(1.0) / max_bounds;
         return texture(volume_texture, in_sampling_pos * obj_to_tex).r;
+}
+
+vec3 get_gradient(vec3 sampling_position) {
+    float x = sampling_position[0];
+    float y = sampling_position[1];
+    float z = sampling_position[2];
+    vec3 length = max_bounds / volume_dimensions;
+    float dx = (get_sample_data(vec3(x + length.x, y, z)) - get_sample_data(vec3(x - length.x, y,z))) / 2;
+    float dy = (get_sample_data(vec3(x , y + length.y, z)) - get_sample_data(vec3(x , y - length.y ,z))) / 2;
+    float dz = (get_sample_data(vec3(x, y, z + length.z)) - get_sample_data(vec3(x , y, z - length.z))) / 2;
+    vec3 grad = vec3(dx, dy, dz);
+    return normalize(grad);
 }
 
 void main()
