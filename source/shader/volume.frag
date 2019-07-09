@@ -78,6 +78,41 @@ vec4 apply_shading(vec3 sampling_pos, vec4 color) {
     return color * vec4(lighting, 1.0);
 }
 
+// 4.2
+vec4 get_pre_integrated_result(vec3 sampling_pos, vec3 ray_increment) {
+    vec4 result = vec4(0, 0, 0, 0);
+    float distance = length(2 * ray_increment);
+    float prev = get_sample_data(sampling_pos - ray_increment);
+    float next = get_sample_data(sampling_pos + ray_increment);
+    float opacity_integral = 0;
+    float increment = 0.1;
+    
+    for (float i = 0; i <= 1; i += increment) {
+        float current_value = (1 - i) * next + i * prev;
+        vec4 current_color = get_color_and_opacity(current_value);
+        opacity_integral += current_color.a;
+    }
+    
+    float opacity = 1 - exp(-distance * opacity_integral);
+    
+    for (float i = 0; i < 1; i += increment) {
+        float current_value = (1 - i) * next + i * prev;
+        vec4 current_color = get_color_and_opacity(current_value);
+        float current_opacity = 0;
+        
+        for (float j = i; j < 1; j += increment) {
+            float current_j_value = (1 - j) * next + j * prev;
+            vec4 current_j_color = get_color_and_opacity(current_j_value);
+            current_opacity += current_j_color.a;
+        }
+        
+        result += current_color * current_color.a * exp(-distance * current_opacity);
+    }
+    
+    result.a = opacity;
+    return result;
+}
+
 // 3.1
 vec4 front_to_back(vec3 sampling_pos, bool inside_volume, vec3 ray_increment) {
     vec4 result = vec4(0.0, 0.0, 0.0, 0.0);
@@ -148,42 +183,6 @@ vec4 back_to_front(vec3 sampling_pos, bool inside_volume, vec3 ray_increment) {
     
     return result;
 }
-
-// 4.2
-vec4 get_pre_integrated_result(vec3 sampling_pos, vec3 ray_increment) {
-    vec4 result = vec4(0, 0, 0, 0);
-    float distance = length(2 * ray_increment);
-    float prev = get_sample_data(sampling_pos - ray_increment);
-    float next = get_sample_data(sampling_pos + ray_increment);
-    float opacity_integral = 0;
-    float increment = 0.1;
-    
-    for (float i = 0; i <= 1; i += increment) {
-        float current_value = (1 - i) * next + i * prev;
-        vec4 current_color = get_color_and_opacity(current_value);
-        opacity_integral += current_color.a;
-    }
-    
-    float opacity = 1 - exp(-distance * opacity_integral);
-    
-    for (float i = 0; i < 1; i += increment) {
-        float current_value = (1 - i) * next + i * prev;
-        vec4 current_color = get_color_and_opacity(current_value);
-        float current_opacity = 0;
-        
-        for (float j = i; j < 1; j += increment) {
-            float current_j_value = (1 - j) * next + j * prev;
-            vec4 current_j_color = get_color_and_opacity(current_j_value);
-            current_opacity += current_j_color.a;
-        }
-        
-        result += current_color * current_color.a * exp(-distance * current_opacity);
-    }
-    
-    result.a = opacity;
-    return result;
-}
-
 
 void main()
 {
